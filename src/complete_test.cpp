@@ -129,6 +129,7 @@
 #include <webots_ros/proto_get_field.h>
 #include <webots_ros/proto_get_field_by_index.h>
 #include <webots_ros/proto_get_number_of_fields.h>
+#include <webots_ros/proto_get_parent.h>
 #include <webots_ros/proto_get_type_name.h>
 #include <webots_ros/proto_is_derived.h>
 #include <webots_ros/range_finder_get_info.h>
