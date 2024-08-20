@@ -4027,7 +4027,7 @@ int main(int argc, char **argv) {
   proto_get_parent_client = n.serviceClient<webots_ros::proto_get_parent>(model_name + "/supervisor/proto/get_parent");
   proto_get_parent_srv.request.proto = proto;
   proto_get_parent_client.call(proto_get_parent_srv);
-  uint64_t proto_parent = proto_get_parent_srv.response.parent;
+  uint64_t proto_parent = proto_get_parent_srv.response.proto;
   if (proto_parent == 0)
     ROS_INFO("Proto has no parent.");
   else
@@ -4042,7 +4042,7 @@ int main(int argc, char **argv) {
   proto_get_type_name_client = n.serviceClient<webots_ros::proto_get_type_name>(model_name + "/supervisor/proto/get_type_name");
   proto_get_type_name_srv.request.proto = proto;
   proto_get_type_name_client.call(proto_get_type_name_srv);
-  std::string proto_type_name = proto_get_type_name_srv.response.name;
+  std::string proto_type_name = proto_get_type_name_srv.response.value;
   if (proto_type_name.compare("RectangleArena") == 0)
     ROS_INFO("Proto type name is \"RectangleArena\".");
   else
