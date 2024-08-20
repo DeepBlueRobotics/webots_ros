@@ -1,5 +1,4 @@
 uint64 node
 uint32 index
-bool queryBaseNode
 ---
 uint64 field
