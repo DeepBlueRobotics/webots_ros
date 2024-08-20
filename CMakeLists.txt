@@ -127,6 +127,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs sensor_msgs messag
     proto_get_field.srv
     proto_get_field_by_index.srv
     proto_get_number_of_fields.srv
+    proto_get_parent.srv
     proto_get_type_name.srv
     proto_is_derived.srv
     range_finder_get_info.srv
