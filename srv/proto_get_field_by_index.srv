@@ -1,4 +1,4 @@
-uint64 node
+uint64 proto
 uint32 index
 ---
 uint64 field

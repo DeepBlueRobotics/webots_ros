@@ -1,4 +1,3 @@
-uint64 node
-bool queryBaseNode
+uint64 proto
 ---
 int32 value

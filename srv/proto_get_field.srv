@@ -1,4 +1,4 @@
-uint64 node
+uint64 proto
 string fieldName
 ---
 uint64 field
