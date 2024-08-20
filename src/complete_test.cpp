@@ -3595,7 +3595,7 @@ int main(int argc, char **argv) {
   supervisor_node_get_field_client.call(supervisor_node_get_field_srv);
   field = supervisor_node_get_field_srv.response.field;
 
-  // supervisor_field_get_type_name
+  // supervisor_field_set_string
   ros::ServiceClient supervisor_field_set_string_client;
   webots_ros::field_set_string supervisor_field_set_string_srv;
   supervisor_field_set_string_client =
