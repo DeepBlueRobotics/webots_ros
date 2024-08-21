@@ -3590,10 +3590,14 @@ int main(int argc, char **argv) {
   supervisor_field_get_count_client.shutdown();
   time_step_client.call(time_step_srv);
 
+  // Get field for upcoming tests
+  supervisor_node_get_field_client = n.serviceClient<webots_ros::node_get_field>(model_name + "/supervisor/node/get_field");
   supervisor_node_get_field_srv.request.node = from_def_node;
   supervisor_node_get_field_srv.request.fieldName = "name";
+  supervisor_node_get_field_srv.request.queryBaseNode = 0;
   supervisor_node_get_field_client.call(supervisor_node_get_field_srv);
   field = supervisor_node_get_field_srv.response.field;
+  supervisor_node_get_field_client.shutdown();
 
   // supervisor_field_set_string
   ros::ServiceClient supervisor_field_set_string_client;
@@ -3658,11 +3662,15 @@ int main(int argc, char **argv) {
   supervisor_field_get_string_client.shutdown();
   time_step_client.call(time_step_srv);
 
+  // Get field for upcomming tests
+  supervisor_node_get_field_client = n.serviceClient<webots_ros::node_get_field>(model_name + "/supervisor/node/get_field");
   supervisor_node_get_field_srv.request.node = root_node;
   supervisor_node_get_field_srv.request.fieldName = "children";
   supervisor_node_get_field_client.call(supervisor_node_get_field_srv);
   field = supervisor_node_get_field_srv.response.field;
+  supervisor_node_get_field_client.shutdown();
 
+  // test supervisor_field_get_node
   ros::ServiceClient supervisor_field_get_node_client;
   webots_ros::field_get_node supervisor_field_get_node_srv;
   supervisor_field_get_node_client = n.serviceClient<webots_ros::field_get_node>(model_name + "/supervisor/field/get_node");
