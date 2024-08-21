@@ -4021,10 +4021,10 @@ int main(int argc, char **argv) {
   proto_get_number_of_fields_srv.request.proto = proto;
   proto_get_number_of_fields_client.call(proto_get_number_of_fields_srv);
   int32_t proto_number_of_fields = proto_get_number_of_fields_srv.response.value;
-  if (proto_number_of_fields == 10)
-    ROS_INFO("Proto has 10 fields.");
+  if (proto_number_of_fields == 14)
+    ROS_INFO("Proto has 14 fields.");
   else
-    ROS_ERROR("Proto has %d fields. Should be 10.", proto_number_of_fields);
+    ROS_ERROR("Proto has %d fields. Should be 14.", proto_number_of_fields);
 
   proto_get_number_of_fields_client.shutdown();
   time_step_client.call(time_step_srv);
